@@ -1,12 +1,12 @@
 package com.mscs.user;
 
-public class UserDetails {
+public class User {
 
 	int UserCardId;
 	String UserName;
 	double UserBalance;
 	
-	public UserDetails(int userCardId, String userName, double userBalance) {
+	public User(int userCardId, String userName, double userBalance) {
 		super();
 		UserCardId = userCardId;
 		UserName = userName;

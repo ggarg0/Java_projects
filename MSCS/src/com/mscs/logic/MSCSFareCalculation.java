@@ -6,11 +6,11 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-import com.mscs.user.UserDetails;
+import com.mscs.user.User;
 
 public class MSCSFareCalculation {
 
-	public Map<String, Integer> journeyDetails(UserDetails user, String startStation,
+	public Map<String, Integer> journeyDetails(User user, String startStation,
 			String endStation, Map<String, Integer> stationMap, Map<String, Integer> stationMapCount) {
 		boolean minimumBalanceAvailable = calcualteMinimumBalance(user);
 		if (minimumBalanceAvailable) {
@@ -24,8 +24,6 @@ public class MSCSFareCalculation {
 
 			double fare = calculateFare(noOfStations);
 			System.out.println("fare : " + fare);
-
-			
 
 			if (user.getUserBalance() < 50) {
 				System.out
@@ -58,7 +56,7 @@ public class MSCSFareCalculation {
 		return stationMapCount;
 	}
 
-	public boolean calcualteMinimumBalance(UserDetails User) {
+	public boolean calcualteMinimumBalance(User User) {
 
 		if (User.getUserBalance() > 50) {
 			return true;
@@ -67,7 +65,7 @@ public class MSCSFareCalculation {
 		}
 	}
 
-	public UserDetails calculateRemainingBalance(UserDetails user, double fare) {
+	public User calculateRemainingBalance(User user, double fare) {
 		user.setUserBalance(user.getUserBalance() - fare);
 		return user;
 	}
