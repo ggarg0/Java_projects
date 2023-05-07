@@ -5,9 +5,9 @@ import java.util.Map;
 
 public class StationDetails {
 
-	public Map getStationDetails()
+	public Map<String, Integer> getStationDetails()
 	{
-		Map stationMap = new HashMap();
+		Map<String, Integer> stationMap = new HashMap<String, Integer>();
 		stationMap.put("A1", 1);
 		stationMap.put("A2", 2);
 		stationMap.put("A3", 3);
@@ -22,9 +22,9 @@ public class StationDetails {
 		return stationMap;
 	}
 	
-	public Map getStationSwipeDetails()
+	public Map<String, Integer> getStationSwipeDetails()
 	{
-		Map stationMapCount = new HashMap();
+		Map<String, Integer> stationMapCount = new HashMap<String, Integer>();
 		stationMapCount.put("A1", 0);
 		stationMapCount.put("A2", 0);
 		stationMapCount.put("A3", 0);

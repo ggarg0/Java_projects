@@ -1,19 +1,19 @@
 package com.mscs.logic;
 
-import java.util.HashMap;
 import java.util.Iterator;
-import java.util.*;
+import java.util.Map;
+import java.util.Set;
 
 public class MSCSReport {
 
-	public void GenerateSwipeRecords(Map stationMapCount) {
+	public void GenerateSwipeRecords(Map<String, Integer> stationMapCount) {
 
 		System.out
 				.println("\n-------------- Station Swipe Records -----------------\n");
 
 		System.out.println();
-		Set set = stationMapCount.keySet();
-		Iterator iterator = set.iterator();
+		Set<String> set = stationMapCount.keySet();
+		Iterator<String> iterator = set.iterator();
 
 		while (iterator.hasNext()) {
 			String key = (String) iterator.next();

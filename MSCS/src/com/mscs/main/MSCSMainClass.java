@@ -15,11 +15,11 @@ public class MSCSMainClass {
 		MSCSFareCalculation fareObj = new MSCSFareCalculation();
 		MSCSReport reportObj = new MSCSReport();
 		
-		UserDetails user1 = new UserDetails(1001,"Gaurav",200.00);
-		UserDetails user2 = new UserDetails(1002,"Garg",200.00);
+		UserDetails user1 = new UserDetails(1001,"Tom",200.00);
+		UserDetails user2 = new UserDetails(1002,"Harry",200.00);
 		
-		Map stationMap = new HashMap();
-		Map stationMapCount = new HashMap();
+		Map<String, Integer> stationMap = new HashMap<String, Integer>();
+		Map<String, Integer> stationMapCount = new HashMap<String, Integer>();
 		stationMap = stationObj.getStationDetails();
 		stationMapCount = stationObj.getStationSwipeDetails();
 	

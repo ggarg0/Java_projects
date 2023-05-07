@@ -2,18 +2,16 @@ package com.mscs.logic;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-import com.mscs.stations.StationDetails;
 import com.mscs.user.UserDetails;
 
 public class MSCSFareCalculation {
 
-	public Map journeyDetails(UserDetails user, String startStation,
-			String endStation, Map stationMap, Map stationMapCount) {
+	public Map<String, Integer> journeyDetails(UserDetails user, String startStation,
+			String endStation, Map<String, Integer> stationMap, Map<String, Integer> stationMapCount) {
 		boolean minimumBalanceAvailable = calcualteMinimumBalance(user);
 		if (minimumBalanceAvailable) {
 			stationMapCount = calculateSwipeCount(startStation, endStation,
@@ -92,14 +90,14 @@ public class MSCSFareCalculation {
 	}
 
 	public int calculateNumberOfStations(String startStation,
-			String endStation, Map stationMap) {
+			String endStation, Map<String, Integer> stationMap) {
 
 		int numberOfStations = 0;
 		int startStationNum = 0;
 		int endStationNum = 0;
 
-		Set set = stationMap.keySet();
-		Iterator iterator = set.iterator();
+		Set<String> set = stationMap.keySet();
+		Iterator<String> iterator = set.iterator();
 
 		while (iterator.hasNext()) {
 			String key = (String) iterator.next();
@@ -119,11 +117,11 @@ public class MSCSFareCalculation {
 		return numberOfStations;
 	}
 
-	public Map calculateSwipeCount(String startStation, String endStation,
-			Map stationMapCount) {
+	public Map<String, Integer> calculateSwipeCount(String startStation, String endStation,
+			Map<String, Integer> stationMapCount) {
 
-		Set set = stationMapCount.keySet();
-		Iterator iterator = set.iterator();
+		Set<String> set = stationMapCount.keySet();
+		Iterator<String> iterator = set.iterator();
 
 		while (iterator.hasNext()) {
 			String key = (String) iterator.next();
