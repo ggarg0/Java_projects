@@ -1,4 +1,4 @@
-package com.mscs.logic;
+package com.mscs.service;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -10,6 +10,9 @@ import com.mscs.user.User;
 
 public class MSCSFareCalculation {
 
+	final double  weekendFare = 5.5;
+	final double weekdayFare = 7;
+	
 	public Map<String, Integer> journeyDetails(User user, String startStation,
 			String endStation, Map<String, Integer> stationMap, Map<String, Integer> stationMapCount) {
 		boolean minimumBalanceAvailable = calcualteMinimumBalance(user);
@@ -73,9 +76,6 @@ public class MSCSFareCalculation {
 	public double calculateFare(int noOfStations) {
 
 		double fare;
-		double weekendFare = 5.5;
-		double weekdayFare = 7;
-
 		Calendar cal = Calendar.getInstance();
 		String Day = (new SimpleDateFormat("EEE").format(cal.getTime()));
 

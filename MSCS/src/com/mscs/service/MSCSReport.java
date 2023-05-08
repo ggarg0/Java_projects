@@ -1,4 +1,4 @@
-package com.mscs.logic;
+package com.mscs.service;
 
 import java.util.Iterator;
 import java.util.Map;

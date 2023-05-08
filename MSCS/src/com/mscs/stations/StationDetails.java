@@ -8,17 +8,17 @@ public class StationDetails {
 	public Map<String, Integer> getStationDetails()
 	{
 		Map<String, Integer> stationMap = new HashMap<String, Integer>();
-		stationMap.put("A1", 1);
-		stationMap.put("A2", 2);
-		stationMap.put("A3", 3);
-		stationMap.put("A4", 4);
-		stationMap.put("A5", 5);
-		stationMap.put("A6", 6);
-		stationMap.put("A7", 7);
-		stationMap.put("A8", 8);
-		stationMap.put("A9", 9);
-		stationMap.put("A10",10);
-		stationMap.put("A11",11);
+		stationMap.put("A1", 5);
+		stationMap.put("A2", 9);
+		stationMap.put("A3", 14);
+		stationMap.put("A4", 19);
+		stationMap.put("A5", 24);
+		stationMap.put("A6", 28);
+		stationMap.put("A7", 33);
+		stationMap.put("A8", 38);
+		stationMap.put("A9", 45);
+		stationMap.put("A10",52);
+		stationMap.put("A11",58);
 		return stationMap;
 	}
 	
